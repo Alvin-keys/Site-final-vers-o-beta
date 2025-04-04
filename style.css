@@ -1,40 +1,33 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
     text-align: center;
 }
-
 h1 {
     color: #333;
 }
-
 .form {
     margin-bottom: 20px;
 }
-
 input, button {
     padding: 10px;
     margin: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 .form button {
     margin: 5px 10px;
 }
-
 button {
     background-color: #007bff;
     color: white;
     cursor: pointer;
 }
-
 button:hover {
     background-color: #0056b3;
 }
-
 .disciplina {
     background-color: #ffdddd;
     border-radius: 5px;
@@ -45,34 +38,27 @@ button:hover {
     justify-content: space-between;
     align-items: center;
 }
-
 .disciplina-info {
     text-align: left;
 }
-
 .disciplina-controles {
     text-align: right;
 }
-
 .concluido {
     background-color: #d4edda !important;
 }
-
 .pausado {
     background-color: #fff3cd !important;
 }
-
 .timer {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
-
 #progresso {
     font-size: 18px;
     margin-top: 20px;
 }
-
 #relatorio {
     margin-top: 10px;
     text-align: left;
@@ -84,7 +70,6 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
 .barra-progresso-relatorio {
     width: 100%;
     height: 8px;
@@ -92,14 +77,12 @@ button:hover {
     border-radius: 4px;
     margin-top: 4px;
 }
-
 .barra-preenchida-relatorio {
     height: 8px;
     background-color: #007bff;
     border-radius: 4px;
     width: 0%;
 }
-
 #relatorio.hidden {
     display: none;
 }
