@@ -6,7 +6,7 @@
     <title>Ciclo de Estudos</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagens/relociclo2.png" type="image/x-icon">
+
 </head>
 <body>
     <h1>📚 Ciclo de Estudos</h1>
@@ -16,6 +16,7 @@
         <input type="number" id="minutosDisciplina" placeholder="Minutos" min="1" step="1">
         <button onclick="adicionarDisciplina()">Adicionar Disciplina</button>
         <button onclick="resetarTodasDisciplinas()">Zerar Disciplinas</button>
+        <button onclick="abrirModalEventos()">📅 Eventos</button>
     </div>
 
     <div id="listaDisciplinas"></div>
@@ -32,6 +33,51 @@
         <button onclick="gerarPDF()">📄 Gerar Relatório PDF</button>
     </div>
 
+    <!-- Área de contagem regressiva de eventos -->
+    <div id="contagemEventos">
+        <h3>Próximos Eventos</h3>
+        <div id="eventosDestaque"></div>
+    </div>
+
+    <!-- Modal de Eventos -->
+    <div id="modalEventos" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalEventos()">&times;</span>
+            <h2>Gerenciar Eventos</h2>
+            
+            <div>
+                <input type="text" id="nomeEvento" placeholder="Nome do evento">
+                <input type="date" id="dataEvento" min="">
+                <button onclick="adicionarEvento()">Adicionar Evento</button>
+            </div>
+            
+            <div id="eventosLista"></div>
+        </div>
+    </div>
+
+    <!-- Modal de Edição de Evento -->
+    <div id="modalEdicaoEvento" class="modal-edicao-evento">
+        <div class="modal-edicao-evento-content">
+            <span class="close" onclick="fecharModalEdicaoEvento()">&times;</span>
+            <h3>Editar Evento</h3>
+            
+            <div class="form-group">
+                <label for="editarNomeEvento">Nome do Evento:</label>
+                <input type="text" id="editarNomeEvento">
+            </div>
+            
+            <div class="form-group">
+                <label for="editarDataEvento">Nova Data:</label>
+                <input type="date" id="editarDataEvento" min="">
+            </div>
+            
+            <div class="botoes">
+                <button onclick="salvarEdicaoEvento()" class="btn-confirmar">Salvar</button>
+                <button onclick="fecharModalEdicaoEvento()" class="btn-cancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
+  
