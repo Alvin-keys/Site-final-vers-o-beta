@@ -873,3 +873,5 @@ let disciplinas = JSON.parse(localStorage.getItem("disciplinas")) || [];
 
         // Atualiza os temporizadores quando a página ganha foco
         window.addEventListener('focus', verificarTemporizadoresAtivos);
+        
+        document.getElementById("ano").textContent = new Date().getFullYear();
